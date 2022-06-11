@@ -1,4 +1,4 @@
-# Cripto Checker
+# Crypto Checker
 
 Application created in HTML, SCSS, Angular
 
