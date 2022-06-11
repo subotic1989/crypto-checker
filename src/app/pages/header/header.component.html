@@ -1,0 +1,9 @@
+<div class="toolbar">
+  <div class="toolbar__logo" [routerLink]="['/']">CRYPTO CHECKER</div>
+  <div class="toolbar__select">
+    <select class="box" (change)="changingValue($any($event.target).value)">
+      <option selected value="eur">EUR</option>
+      <option value="usd">USD</option>
+    </select>
+  </div>
+</div>

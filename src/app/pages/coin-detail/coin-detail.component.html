@@ -1,0 +1,34 @@
+<div class="container">
+  <!-- coin -->
+  <div class="coin">
+    <div class="coin__card">
+      <img src="{{ coin?.image }}" alt="{{ coin?.id }}" />
+      <h1>{{ coin?.id | titlecase }}</h1>
+      <p><span>Rank:</span>{{ coin?.rank }}</p>
+      <p><span>Liquidity score:</span>{{ coin?.liquidity_score }}</p>
+      <p>
+        <span>Description:</span>
+        {{ coin?.description?.split(" ")?.slice(0, 50)?.join(" ") }}...
+      </p>
+    </div>
+  </div>
+
+  <!-- chart -->
+  <div class="chart">
+    <canvas id="myChart"> </canvas>
+    <div class="btn-days">
+      <button (click)="onUpdateChartOnDateChange(1)" class="btn-custom">
+        24 hours
+      </button>
+      <button (click)="onUpdateChartOnDateChange(30)" class="btn-custom">
+        30 days
+      </button>
+      <button (click)="onUpdateChartOnDateChange(90)" class="btn-custom">
+        90 days
+      </button>
+      <button (click)="onUpdateChartOnDateChange(365)" class="btn-custom">
+        1 year
+      </button>
+    </div>
+  </div>
+</div>
